@@ -19,7 +19,7 @@ const SideBar = () => {
 
   return (
     <div className="flex flex-col gap-8 w-full">
-      <div className="block pl-10">
+      <div className="block pl-6">
         <img
           src={logo}
           alt="MainStack"
@@ -43,7 +43,7 @@ const SideBar = () => {
         </NavLink>
 
         <div className="flex flex-col gap-5">
-          <p className="text-secondary pl-10">OTHERS 1</p>
+          <p className="text-secondary pl-6">OTHERS 1</p>
           <NavLink to={"/item1"}>
             <SidebarItems title="Item 4" icon={<TbCameraPlus />} />
           </NavLink>
@@ -53,7 +53,7 @@ const SideBar = () => {
         </div>
 
         <div className="flex flex-col gap-5">
-          <p className="text-secondary pl-10">OTHERS 2</p>
+          <p className="text-secondary pl-6">OTHERS 2</p>
           <NavLink to={"/item1"}>
             <SidebarItems title="Item 6" icon={<MdOutlineSubscriptions />} />
           </NavLink>
@@ -66,7 +66,7 @@ const SideBar = () => {
         </div>
       </div>
 
-      <div className="px-10 pt-12 flex flex-row justify-between text-[15px] font-semibold leading-[24px] text-secondary w-full items-center">
+      <div className="px-6 pt-12 flex flex-row justify-between text-[15px] font-semibold leading-[24px] text-secondary w-full items-center">
         <div className="flex flex-row gap-4 items-center">
           <img src="/user.png" alt="user" className="rounded-full" />
           <h5 className="text-[15px] font-semibold leading-[24px] text-secondary">

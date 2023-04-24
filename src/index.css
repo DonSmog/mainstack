@@ -35,7 +35,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .sidebar_item_inner {
-  @apply flex gap-4 pl-10 items-center justify-start px-5 text-left text-[16px] font-semibold leading-[24px] text-secondary;
+  @apply flex gap-4 pl-6 items-center justify-start px-5 text-left text-[16px] font-semibold leading-[24px] text-secondary;
 }
 
 .sidebar_item_inner > p {
