@@ -133,6 +133,7 @@ const HomeCharts = () => {
   );
 
   const doughnutOptions = {
+    cutout: "65%",
     plugins: {
       legend: {
         position: "left" as const,
