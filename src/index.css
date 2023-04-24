@@ -1,0 +1,75 @@
+@import url("https://fonts.cdnfonts.com/css/garute");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply m-0 p-0 box-border;
+  font-family: "Garute", sans-serif;
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-white scroll-smooth top-0 m-0 p-0 overflow-x-hidden h-full;
+}
+
+body::-webkit-scrollbar {
+  @apply w-[5px];
+}
+
+body::-webkit-scrollbar-track {
+  @apply bg-white;
+}
+
+body::-webkit-scrollbar-thumb {
+  @apply bg-tertiary rounded-[5px];
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  @apply bg-secondary;
+}
+
+.sidebar_item {
+  @apply p-0;
+}
+
+.sidebar_item_inner {
+  @apply flex gap-4 pl-10 items-center justify-start px-5 text-left text-[16px] font-semibold leading-[24px] text-secondary;
+}
+
+.sidebar_item_inner > p {
+  @apply flex items-center m-0 p-0 text-[1.4rem] text-secondary;
+}
+
+.sidebar_item_inner > span {
+  @apply flex m-0 p-0;
+}
+
+.sidebar_item:hover .sidebar_item_inner {
+  @apply text-tertiary;
+}
+
+.sidebar_item:hover .sidebar_item_inner p {
+  @apply text-tertiary;
+}
+
+.active .sidebar_item_inner {
+  @apply text-tertiary items-center font-bold transition-all ease-in-out duration-500 border-l-2 border-tertiary;
+}
+
+.active .sidebar_item_inner > p {
+  @apply text-tertiary;
+}
+
+.selection label {
+  @apply flex border rounded-[100px] border-border h-[40px] px-5 items-center justify-center text-sm font-semibold text-gray-100 cursor-pointer;
+}
+
+.selection input {
+  display: none;
+}
+
+.selection input:checked + label {
+  @apply bg-pink-100 border-tertiary text-tertiary;
+}
