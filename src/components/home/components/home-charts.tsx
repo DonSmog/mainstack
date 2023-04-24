@@ -38,15 +38,15 @@ const days = [
   },
   {
     id: "3day",
-    name: "3 Day",
+    name: "3 Days",
   },
   {
     id: "7day",
-    name: "7 Day",
+    name: "7 Days",
   },
   {
     id: "30day",
-    name: "30 Day",
+    name: "30 Days",
   },
   {
     id: "all_time",
