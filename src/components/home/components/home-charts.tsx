@@ -94,6 +94,8 @@ const HomeCharts = () => {
     );
   }
 
+  const screenSize = window.innerWidth;
+  const isMobile = screenSize < 768;
   const topView = Object.keys(data?.graph_data?.views).map((key) => {
     return {
       label: key,
@@ -136,7 +138,7 @@ const HomeCharts = () => {
     cutout: "65%",
     plugins: {
       legend: {
-        position: "left" as const,
+        position: isMobile ? ("top" as const) : ("left" as const),
         rtl: true,
         labels: {
           usePointStyle: true,
@@ -204,7 +206,6 @@ const HomeCharts = () => {
         show: false,
       },
       type: "area",
-      height: 500,
       zoom: {
         enabled: false,
       },
@@ -225,7 +226,7 @@ const HomeCharts = () => {
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="flex flex-row gap-4 w-full">
+      <div className="xl:flex grid grid-cols-3 xl:flex-row gap-4 w-full">
         {days.map((day) => (
           <div className="selection" key={day.id}>
             <input
@@ -251,15 +252,20 @@ const HomeCharts = () => {
             </span>
           </div>
           <p className="text-secondary text-sm w-fit-content">{selected}</p>
-          <h5 className="font-semibold text-[48px] text-primary">
+          <h5 className="font-semibold xl:text-[48px] text-xl text-primary">
             {totalTopView}
           </h5>
-          <Chart options={options} series={series} type="area" height={350} />
+          <Chart
+            options={options}
+            series={series}
+            type="area"
+            height={isMobile ? 200 : 350}
+          />
         </div>
       </CardContainer>
 
-      <div className="flex gap-3 w-full">
-        <div className="flex w-1/2">
+      <div className="flex xl:flex-row flex-col gap-3 w-full">
+        <div className="flex xl:w-1/2 w-full">
           <CardContainer>
             <div className="flex flex-row justify-between items-center w-full">
               <h5 className="text-primary font-bold text-lg">Top Location</h5>
@@ -270,7 +276,7 @@ const HomeCharts = () => {
             <Doughnut options={doughnutOptions} data={locationData} />
           </CardContainer>
         </div>
-        <div className="flex w-1/2">
+        <div className="flex xl:w-1/2 w-full">
           <CardContainer>
             <div className="flex flex-row justify-between items-center w-full">
               <h5 className="text-primary font-bold text-lg">

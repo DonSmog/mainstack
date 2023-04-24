@@ -13,6 +13,12 @@ module.exports = {
         "white-100": "#f3f3f3",
         border: "#eff1f6",
       },
+      theme: {
+        screens: {
+          sm: "640px",
+          md: "768px",
+        },
+      },
     },
   },
   plugins: [],

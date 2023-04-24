@@ -16,7 +16,7 @@ export const HomeTop = () => {
   return (
     <div className="flex flex-col gap-2">
       <div className="flex flex-row gap-1 items-center">
-        <h1 className="text-primary font-bold text-[24px] leading-[32px]">
+        <h1 className="text-primary font-bold xl:text-[24px] text-xl leading-[32px]">
           {greeting}, Blessing
         </h1>
         <img

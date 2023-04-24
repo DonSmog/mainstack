@@ -63,7 +63,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .selection label {
-  @apply flex border rounded-[100px] border-border h-[40px] px-5 items-center justify-center text-sm font-semibold text-gray-100 cursor-pointer;
+  @apply flex border rounded-[100px] border-border h-[40px] xl:px-5 px-2 items-center justify-center text-sm font-semibold text-gray-100 cursor-pointer;
 }
 
 .selection input {

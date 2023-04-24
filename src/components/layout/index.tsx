@@ -4,10 +4,10 @@ import SideBar from "../sidebar";
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <div className="flex w-full h-full">
-      <div className="flex h-screen overflow-hidden fixed w-1/5 py-6 border-r-2 border-border">
+      <div className="lg:flex hidden h-screen overflow-hidden fixed w-1/5 py-6 border-r-2 border-border">
         <SideBar />
       </div>
-      <div className="flex flex-col gap-8 pl-[22vw] pr-10 py-6 min-h-[100vh] w-full">
+      <div className="flex flex-col xl:gap-8 gap-4 xl:pl-[22vw] xl:pr-10 px-4 py-6 min-h-[100vh] w-full">
         {children}
       </div>
     </div>
