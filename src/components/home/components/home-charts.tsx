@@ -95,7 +95,7 @@ const HomeCharts = () => {
   }
 
   const screenSize = window.innerWidth;
-  const isMobile = screenSize < 768;
+  const isMobile = screenSize < 769;
   const topView = Object.keys(data?.graph_data?.views).map((key) => {
     return {
       label: key,
@@ -148,7 +148,7 @@ const HomeCharts = () => {
           textAlign: "right" as const,
           color: "#131316",
           font: {
-            size: 16,
+            size: isMobile ? 14 : 16,
             weight: "600",
           },
         },
@@ -226,7 +226,7 @@ const HomeCharts = () => {
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="xl:flex grid grid-cols-3 xl:flex-row gap-4 w-full">
+      <div className="xl:flex grid grid-cols-3 xl:flex-row xl:gap-4 gap-2 w-full">
         {days.map((day) => (
           <div className="selection" key={day.id}>
             <input

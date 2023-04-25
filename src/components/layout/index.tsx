@@ -4,7 +4,7 @@ import { Divide as Hamburger } from "hamburger-react";
 
 const Layout = ({ children }: { children: ReactNode }) => {
   const screenSize = window.innerWidth;
-  const isMobile = screenSize < 768;
+  const isMobile = screenSize < 835;
 
   const [isOpen, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);

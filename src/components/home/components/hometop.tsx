@@ -32,10 +32,10 @@ export const HomeTop = () => {
         />
       </div>
       <div className="flex justify-between items-center">
-        <p className="text-secondary text-sm">
+        <p className="text-secondary xl:text-sm text-[12px]">
           Check out your dashboard summary.
         </p>
-        <span className="text-tertiary text-sm cursor-pointer hover:font-bold">
+        <span className="text-tertiary xl:text-sm text-[12px] cursor-pointer hover:font-bold">
           View analytics
         </span>
       </div>
